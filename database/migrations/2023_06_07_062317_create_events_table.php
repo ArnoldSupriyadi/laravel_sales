@@ -17,10 +17,10 @@ return new class extends Migration
             $table->string('nama_acara');
             $table->date('waktu_mulai');
             $table->date('waktu_akhir');
-            $table->string('tempat');
-            $table->string('riwayat_event');
-            $table->string('perkiraan_traffic');
-            $table->string('document');
+            $table->varchar('tempat');
+            $table->varchar('riwayat_event');
+            $table->varchar('perkiraan_traffic');
+            $table->varchar('document');
             $table->integer('is_approve');
             $table->integer('diperiksa_oleh');
             $table->integer('setujui_oleh');
