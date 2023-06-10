@@ -16,9 +16,9 @@ return new class extends Migration
             $table->integer('event_id');
             $table->integer('id_sub_pekerja');
             $table->string('name');
-            $table->varchar('unit');
-            $table->varchar('jml_kebuthan');
-            $table->vachar('keterangan');
+            $table->string('unit');
+            $table->string('jml_kebuthan');
+            $table->string('keterangan');
             $table->integer('total_all');
             $table->timestamps();
         });
