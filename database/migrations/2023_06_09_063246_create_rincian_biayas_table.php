@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->integer('unit');
             $table->integer('jml_kebutuhan');
-            $table->varchar('keterangan');
+            $table->string('keterangan');
             $table->integer('total_all');
             $table->timestamps();
         });
