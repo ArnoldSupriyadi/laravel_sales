@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('tenaga_kerjas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('event_id')->constrained('events');
-            $table->foreignId('id_sub_pekerja')->constrained('sub_pekerja');
+            $table->foreignId('id_sub_pekerja')->constrained('sub_pekerjas');
             $table->string('name');
             $table->string('unit');
             $table->string('jml_kebuthan');
