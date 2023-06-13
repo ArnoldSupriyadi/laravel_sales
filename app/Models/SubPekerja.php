@@ -16,7 +16,7 @@ class SubPekerja extends Model
         'biaya'
     ];
 
-    public function rincianPekerja()
+    public function subPekerja()
     {
         return $this->belongsTo(TenagaKerja::class, 'id');
     }
