@@ -1,0 +1,62 @@
+.title {
+    color: #000;
+}
+
+.title h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.subtitle h3 {
+    color: #000000;
+}
+
+.wrapper {
+    border: 1px solid #000000;
+}
+
+.desc p {
+    font-size: 14px;
+}
+
+.total-sales {
+    position: relative;
+    left: 4%;
+}
+
+.section-judulformulir {
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.section-rincianbiaya {
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+td {
+  color: #000;  
+}
+
+.section-tenagakerja {
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.section-targetsales {
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.section-signature {
+    color: #000;
+}
+
+.section-notes {
+    color: #850000;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
