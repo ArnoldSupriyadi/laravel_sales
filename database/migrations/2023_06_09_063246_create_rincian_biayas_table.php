@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('rincian_biayas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('event_id')->constrained('events');
-            $table->foreignId('id_sub_biaya')->constrained('sub_biaya');
+            $table->foreignId('id_sub_biaya')->constrained('sub_biayas');
             $table->string('name');
             $table->integer('unit');
             $table->integer('jml_kebutuhan');

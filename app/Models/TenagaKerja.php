@@ -20,4 +20,9 @@ class TenagaKerja extends Model
         'keterangan',
         'total_all'
     ];
+
+    public function rincianPekerja()
+    {
+        return $this->belongsTo(Event::class, 'event_id');
+    }
 }

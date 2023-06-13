@@ -26,8 +26,4 @@ class RincianBiaya extends Model
         return $this->belongsTo(Event::class, 'event_id');
     }
 
-    public function rincianBiaya()
-    {
-        return $this->belongsTo(SubBiaya::class, 'id');
-    }
 }

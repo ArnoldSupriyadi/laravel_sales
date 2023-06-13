@@ -15,4 +15,9 @@ class SubBiaya extends Model
         'name',
         'biaya'
     ];
+
+    public function subPekerja()
+    {
+        return $this->belongsTo(RincianBiaya::class, 'id');
+    }
 }
