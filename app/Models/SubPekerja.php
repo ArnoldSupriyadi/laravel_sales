@@ -18,6 +18,6 @@ class SubPekerja extends Model
 
     public function subPekerja()
     {
-        return $this->belongsTo(TenagaKerja::class, 'id');
+        return $this->hasMany(TenagaKerja::class, 'id');
     }
 }

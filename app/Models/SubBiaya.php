@@ -18,6 +18,6 @@ class SubBiaya extends Model
 
     public function subBiaya()
     {
-        return $this->belongsTo(RincianBiaya::class, 'id');
+        return $this->hasMany(RincianBiaya::class, 'id');
     }
 }
