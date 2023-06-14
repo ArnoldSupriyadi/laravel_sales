@@ -20,9 +20,4 @@ class SubPekerja extends Model
     {
         return $this->hasMany(TenagaKerja::class, 'id');
     }
-
-    public function Event()
-    {
-        return $this->belongsTo(Event::class, 'id_sub_pekerja');
-    }
 }

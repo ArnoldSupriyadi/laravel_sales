@@ -40,4 +40,14 @@ class Event extends Model
         return $this->belongsTo(User::class, 'disetujui_oleh');
     }
 
+    public function RincianBiaya()
+    {
+        return $this->hasMany(RincianBiaya::class, 'event_id');
+    }
+
+    public function TenagaKerja()
+    {
+        return $this->hasMany(TenagaKerja::class, 'event_id');
+    }
+
 }

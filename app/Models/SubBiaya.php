@@ -20,9 +20,4 @@ class SubBiaya extends Model
     {
         return $this->hasMany(RincianBiaya::class, 'id_sub_biaya', 'id');
     }
-
-    public function Event()
-    {
-        return $this->belongsTo(Event::class, 'id_sub_biaya');
-    }
 }
