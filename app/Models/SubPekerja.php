@@ -16,8 +16,13 @@ class SubPekerja extends Model
         'biaya'
     ];
 
-    public function subPekerja()
+    public function tenagaKerja()
     {
         return $this->hasMany(TenagaKerja::class, 'id');
+    }
+
+    public function Event()
+    {
+        return $this->belongsTo(Event::class, 'id_sub_pekerja');
     }
 }

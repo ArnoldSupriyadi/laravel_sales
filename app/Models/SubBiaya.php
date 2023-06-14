@@ -16,8 +16,8 @@ class SubBiaya extends Model
         'biaya'
     ];
 
-    public function subBiaya()
+    public function rincianBiaya()
     {
-        return $this->hasMany(RincianBiaya::class, 'id');
+        return $this->hasMany(RincianBiaya::class, 'id_sub_biaya', 'id');
     }
 }

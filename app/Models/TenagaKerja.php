@@ -21,7 +21,7 @@ class TenagaKerja extends Model
         'total_all'
     ];
 
-    public function rincianPekerja()
+    public function rincianEvent()
     {
         return $this->belongsTo(Event::class, 'event_id');
     }
