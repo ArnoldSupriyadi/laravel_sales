@@ -27,7 +27,22 @@ Route::prefix('admin')->group(function(){
     Route::group(['middleware' => 'auth'], function(){
 
         //dashboard
-        Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard.index');
+        Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+
+        //form
+        Route::get('/form', [App\Http\Controllers\Admin\FormController::class, 'index'])->name('form');
+
+        //user
+        Route::get('/user', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('user');
+
+        //user
+        Route::get('/user/create', [App\Http\Controllers\Admin\UserController::class, 'create'])->name('user.create');
+
+        //user
+        Route::get('/user/edit', [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('user.edit');
+
+        //user post
+        Route::post('user/store', [App\Http\Controllers\Admin\UserController::class, 'store'])->name('user.store');
     });
 });
 
