@@ -7,6 +7,7 @@
     <h1 class="h3 mb-2 text-gray-800">Input Rincian Biaya</h1>
 
     <form action="{{ route('rincianbiaya.store') }}" method="POST" class="mt-3">
+        @csrf
         <div class="mb-3 row">
             <label for="inputAcara" class="col-sm-2 col-form-label">Nama</label>
             <div class="col-sm-10">
@@ -23,7 +24,7 @@
         <hr class="sidebar-divider">
         
         <a href="{{ route('rincianbiaya') }}" class="btn btn-danger mx-2">Cancel</a>
-        <button type="submit" class="btn btn-success">Save</button>
+        <button type="submit" class="btn btn-success">Submit</button>
     </form>
 </div>
 @endsection
