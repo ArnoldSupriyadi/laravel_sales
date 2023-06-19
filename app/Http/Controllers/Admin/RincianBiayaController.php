@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\SubBiaya;
 
 class RincianBiayaController extends Controller
 {
@@ -28,7 +29,17 @@ class RincianBiayaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' =>  'required',
+            'biaya' => 'required',
+        ]);
+
+        SubBiaya::create([
+            'name' => $request->name,
+            'biaya' => $request->biaya,
+        ]);
+
+        return redirect()->route('rincianbiaya')->with(['success' => 'berhasil di buat']);
     }
 
     /**

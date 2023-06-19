@@ -6,33 +6,13 @@
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
-        <div class="col-md-12">
-            <h1 class="h3 mb-2 text-gray-800">Input Tenaga Kerja</h1>
         
-            <form action="" class="mt-3">
-                <div class="mb-3 row">
-                    <label for="inputAcara" class="col-sm-2 col-form-label">Nama</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputAcara" placeholder="name@example.com">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="inputRiwayatEvent" class="col-sm-2 col-form-label">Biaya</label>
-                    <div class="col-sm-10">
-                        <input type="number" class="form-control" id="inputRiwayatEvent">
-                    </div>
-                </div>
-
-                <hr class="sidebar-divider">
-                
-                <button type="submit" class="btn btn-danger mx-2">Cancel</button>
-                <button type="submit" class="btn btn-success">Save</button>
-            </form>
-
-              
+        <div class="col-md-12 my-4">
+            <a href="{{{ route('tenagakerja.create') }}}" class="btn btn-primary">Add Biaya</a>
         </div>
         
         <div class="col-md-12 mt-5">
+            <h1 class="h3 mb-2 text-gray-800 mb-4">Tenaga Kerja</h1>
              <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">

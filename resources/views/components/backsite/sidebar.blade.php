@@ -37,7 +37,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="inputtenagakerja.html">
+                <a class="nav-link" href="{{ route('tenagakerja') }}">
                     <i class="fa fa-book" aria-hidden="true"></i>
                     <span>Input Tenaga Kerja</span></a>
             </li>

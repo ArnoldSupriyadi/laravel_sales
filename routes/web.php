@@ -50,8 +50,19 @@ Route::prefix('admin')->group(function(){
         //rinicianbiaya
         Route::get('/rincianbiaya', [App\Http\Controllers\Admin\RincianBiayaController::class, 'index'])->name('rincianbiaya');
 
-         //rinicianbiaya
-         Route::get('/rincianbiaya/create', [App\Http\Controllers\Admin\RincianBiayaController::class, 'create'])->name('rincianbiaya.create');
+        //rinicianbiaya
+        Route::get('/rincianbiaya/create', [App\Http\Controllers\Admin\RincianBiayaController::class, 'create'])->name('rincianbiaya.create');
+
+        //rinicianbiaya
+        Route::post('/rincianbiaya/store', [App\Http\Controllers\Admin\RincianBiayaController::class, 'store'])->name('rincianbiaya.store');
+
+        //tenagakerja
+        Route::get('/tenagakerja', [App\Http\Controllers\Admin\TenagaKerjaController::class, 'index'])->name('tenagakerja');
+
+        //tenagakerja
+        Route::get('/tenagakerja/create', [App\Http\Controllers\Admin\TenagaKerjaController::class, 'create'])->name('tenagakerja.create');
+
+          
     });
 });
 

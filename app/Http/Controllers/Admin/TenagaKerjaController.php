@@ -20,7 +20,7 @@ class TenagaKerjaController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tenagakerja.create');
     }
 
     /**
