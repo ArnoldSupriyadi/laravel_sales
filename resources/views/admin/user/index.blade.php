@@ -7,10 +7,12 @@
             <a href="{{ route('user.create') }}" class="btn btn-primary">Add User</a>
         </div>
          @if ($message = Session::get('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ $message }}
-                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"><i class="ti-close"></i></button>
-            </div>
+         <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>  {{ $message }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
         @endif
         <!-- DataTales Example -->
         <div class="card shadow mb-4">

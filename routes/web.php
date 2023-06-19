@@ -43,6 +43,15 @@ Route::prefix('admin')->group(function(){
 
         //user post
         Route::post('user/store', [App\Http\Controllers\Admin\UserController::class, 'store'])->name('user.store');
+
+        //list data
+        Route::get('/listdata', [App\Http\Controllers\Admin\ListDataController::class, 'index'])->name('listdata');
+
+        //rinicianbiaya
+        Route::get('/rincianbiaya', [App\Http\Controllers\Admin\RincianBiayaController::class, 'index'])->name('rincianbiaya');
+
+         //rinicianbiaya
+         Route::get('/rincianbiaya/create', [App\Http\Controllers\Admin\RincianBiayaController::class, 'create'])->name('rincianbiaya.create');
     });
 });
 

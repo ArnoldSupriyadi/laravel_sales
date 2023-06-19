@@ -31,7 +31,7 @@
 
             
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('rincianbiaya') }}">
                     <i class="fa fa-book" aria-hidden="true"></i>
                     <span>Input Rincian Biaya</span></a>
             </li>
@@ -53,7 +53,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="{{ route('listdata') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>List Data</span></a>
             </li>
