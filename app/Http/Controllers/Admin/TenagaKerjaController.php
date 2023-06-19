@@ -13,7 +13,9 @@ class TenagaKerjaController extends Controller
      */
     public function index()
     {
-        return view('admin.tenagakerja.index');
+        $tenagaKerja = SubPekerja::all();
+
+        return view('admin.tenagakerja.index', ['tenagakerja' => $tenagaKerja]);
     }
 
     /**
@@ -31,7 +33,7 @@ class TenagaKerjaController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'biaya' => 'required'
+            'biaya' => 'required',
         ]);
 
         SubPekerja::create([

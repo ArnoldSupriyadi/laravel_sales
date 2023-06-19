@@ -46,12 +46,14 @@
                                 </tr>
                             </tfoot>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Sewa Tenda</td>
-                                    <td>3.000.000</td>
-                                    <td><a href="#" class="btn btn-warning">Edit</a><a href="#" class="btn btn-danger mx-3">Delete</a></td>
+                                @foreach ($tenagakerja as $subpekerja) 
+                                <tr>                                   
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $subpekerja->name }}</td>
+                                        <td>@currency($subpekerja->biaya)</td>
+                                        <td><a href="#" class="btn btn-warning">Edit</a><a href="#" class="btn btn-danger mx-3">Delete</a></td>
                                 </tr>
+                                @endforeach
                                 
                             </tbody>
                         </table>

@@ -8,6 +8,7 @@
         <h1 class="h3 mb-2 text-gray-800">Input Tenaga Kerja</h1>
 
         <form action="{{ route('tenagakerja.store') }}" method="POST" class="mt-3">
+            @csrf
             <div class="mb-3 row">
                 <label for="inputAcara" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-10">

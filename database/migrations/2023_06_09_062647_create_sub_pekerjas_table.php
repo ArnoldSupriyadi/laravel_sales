@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('sub_pekerjas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->string('name');
             $table->integer('biaya');
             $table->timestamps();
         });
