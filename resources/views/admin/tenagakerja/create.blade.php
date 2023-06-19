@@ -7,17 +7,17 @@
     <div class="col-md-12">
         <h1 class="h3 mb-2 text-gray-800">Input Tenaga Kerja</h1>
 
-        <form action="" class="mt-3">
+        <form action="{{ route('tenagakerja.store') }}" method="POST" class="mt-3">
             <div class="mb-3 row">
                 <label for="inputAcara" class="col-sm-2 col-form-label">Nama</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputAcara" placeholder="name@example.com">
+                    <input type="text" id="name" name="name" class="form-control"  required value="{{ old('name') }}">
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="inputRiwayatEvent" class="col-sm-2 col-form-label">Biaya</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="inputRiwayatEvent">
+                    <input type="number" id="biaya" name="biaya" class="form-control" required value="{{ old('biaya') }}">
                 </div>
             </div>
 

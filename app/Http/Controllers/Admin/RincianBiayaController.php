@@ -13,7 +13,9 @@ class RincianBiayaController extends Controller
      */
     public function index()
     {
-        return view('admin.rincianbiaya.index');
+        $rincianBiayas = SubBiaya::all();
+
+        return view('admin.rincianbiaya.index', ['rincianbiaya' => $rincianBiayas]);
     }
 
     /**

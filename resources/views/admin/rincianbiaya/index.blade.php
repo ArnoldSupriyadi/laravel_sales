@@ -32,6 +32,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th>No</th>
                             <th>Nama</th>
                             <th>Biaya</th>
                             <th>Action</th>
@@ -39,17 +40,21 @@
                     </thead>
                     <tfoot>
                         <tr>
+                            <th>No</th>
                             <th>Nama</th>
                             <th>Biaya</th>
                             <th>Action</th>
                         </tr>
                     </tfoot>
                     <tbody>
+                        @foreach ($rincianbiaya as $biaya)                         
                         <tr>
-                            <td>Sewa Tenda</td>
-                            <td>3.000.000</td>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $biaya->name }}</td>
+                            <td>@currency($biaya->biaya)</td>
                             <td><a href="#" class="btn btn-warning">Edit</a><a href="#" class="btn btn-danger mx-3">Delete</a></td>
                         </tr>
+                        @endforeach
                         
                     </tbody>
                 </table>

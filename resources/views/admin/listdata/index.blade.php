@@ -8,7 +8,9 @@
 
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">List Data Dokumen</h1>
-        <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.</p>
+        <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+            For more information about DataTables, please visit the <a target="_blank"
+                href="https://datatables.net">official DataTables documentation</a>.</p>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
@@ -48,7 +50,7 @@
                                 <td>61</td>
                                 <td>2011/04/25</td>
                                 <td>$320,800</td>
-                                <td><a href="#" class="btn btn-info mx-2">Download</a></td>
+                                <td><a href="#" class="btn btn-info mx-2">Download</a</td>
 
                             </tr>
                         </tbody>

@@ -13,6 +13,14 @@
         
         <div class="col-md-12 mt-5">
             <h1 class="h3 mb-2 text-gray-800 mb-4">Tenaga Kerja</h1>
+            @if ($message = Session::get('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+               <strong>  {{ $message }}</strong>
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>
+           @endif
              <!-- DataTales Example -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -23,6 +31,7 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
+                                    <th>No</th>
                                     <th>Nama</th>
                                     <th>Biaya</th>
                                     <th>Action</th>
@@ -30,6 +39,7 @@
                             </thead>
                             <tfoot>
                                 <tr>
+                                    <th>No</th>
                                     <th>Nama</th>
                                     <th>Biaya</th>
                                     <th>Action</th>
@@ -37,6 +47,7 @@
                             </tfoot>
                             <tbody>
                                 <tr>
+                                    <td>1</td>
                                     <td>Sewa Tenda</td>
                                     <td>3.000.000</td>
                                     <td><a href="#" class="btn btn-warning">Edit</a><a href="#" class="btn btn-danger mx-3">Delete</a></td>

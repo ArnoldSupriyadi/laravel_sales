@@ -62,6 +62,9 @@ Route::prefix('admin')->group(function(){
         //tenagakerja
         Route::get('/tenagakerja/create', [App\Http\Controllers\Admin\TenagaKerjaController::class, 'create'])->name('tenagakerja.create');
 
+        //tenagakerja
+        Route::post('/tenagakerja/store', [App\Http\Controllers\Admin\TenagaKerjaController::class, 'store'])->name('tenagakerja.store');
+
           
     });
 });

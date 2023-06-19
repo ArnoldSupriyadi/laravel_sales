@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\SubPekerja;
 use Illuminate\Http\Request;
 
 class TenagaKerjaController extends Controller
@@ -28,7 +29,17 @@ class TenagaKerjaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'biaya' => 'required'
+        ]);
+
+        SubPekerja::create([
+            'name' => $request->name,
+            'biaya' => $request->biaya,
+        ]);
+
+        return redirect()->route('tenagakerja')->with(['success' => 'Berhasil di buat']);
     }
 
     /**
