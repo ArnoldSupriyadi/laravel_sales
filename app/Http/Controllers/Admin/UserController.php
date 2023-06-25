@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -41,7 +42,7 @@ class UserController extends Controller
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Crypt::encrypt($request->password)
+            'password' => Hash::make($request->password)
         ]);
 
         return redirect()->route('user')->with(['success' => 'berhasil di buat']);
@@ -67,9 +68,9 @@ class UserController extends Controller
         // $encryptpass = Crypt::encrypt($pass);
         // $hasilpass = Crypt::decrypt($passwordUser);
         
-        dd($user);
+        // dd($user);
 
-        return view('user.edit', compact('user'));
+         return view('admin.user.edit', compact('user'));
     }
 
     /**
