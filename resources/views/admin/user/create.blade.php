@@ -12,7 +12,7 @@
                     <!-- Content Row -->
                     <div class="row">
                         <div class="col-md-12 my-4">
-                            <form action="{{ route('user.store') }}" method="POST">
+                            <form action="{{ route('user.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3 row">
                                     <label for="inputAcara" class="col-sm-2 col-form-label">Nama User</label>

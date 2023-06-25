@@ -12,44 +12,39 @@
                     <!-- Content Row -->
                     <div class="row">
                         <div class="col-md-12 my-4">
-                            <form action="">
+                            <form action="{{ route('user.update', $user->id) }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
                                 <div class="mb-3 row">
                                     <label for="inputAcara" class="col-sm-2 col-form-label">Nama User</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputAcara" placeholder="john">
+                                        <input type="text" name="name" class="form-control" id="inputAcara" placeholder="john" value="{{ $user->name }}">
                                     </div>
                                 </div>
 
                                 <div class="mb-3 row">
                                     <label for="inputAcara" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputAcara" placeholder="name@example.com">
+                                        <input type="email" name="email" class="form-control" id="inputAcara" placeholder="name@example.com" value="{{ $user->email }}">
                                     </div>
                                 </div>
 
                                 <div class="mb-3 row">
                                     <label for="inputAcara" class="col-sm-2 col-form-label">Password</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputAcara" placeholder="password">
+                                        <input type="password" name="password" class="form-control" id="inputAcara" placeholder="password" value="{{ $hasilpass }}">
                                     </div>
                                 </div>
 
-                                <div class="mb-3 row">
-                                    <label for="inputAcara" class="col-sm-2 col-form-label">Confirm Password</label>
-                                    <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputAcara" placeholder="confirm password">
-                                    </div>
-                                </div>
-
-                                <p>Role</p>
+                                {{-- <p>Role</p>
                                 <div class="checkbox">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
                                         <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
                                       </div>
-                                </div>
+                                </div> --}}
 
-                                <a href="#" class="btn btn-primary mt-4">Save</a>
+                                <button type="submit" class="btn btn-primary mt-4">Save</button>
                             </form>
                         </div>
                     </div>

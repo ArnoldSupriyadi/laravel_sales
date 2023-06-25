@@ -44,7 +44,7 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $user->name }}</td>
                                 <td><span class="badge badge-pill badge-success">Admin</span></td>
-                                <td><a href="{{ route('user.edit') }}" class="btn btn-warning">Edit</a>
+                                <td><a href="{{ route('user.edit', $user->id) }}" class="btn btn-warning">Edit</a>
                                     <a href="#" class="btn btn-danger mx-3">Delete</a>
                                 </td>
                             </tr>

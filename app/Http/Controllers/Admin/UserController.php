@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Crypt;
 
 class UserController extends Controller
 {
@@ -41,7 +41,7 @@ class UserController extends Controller
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => Crypt::encrypt($request->password)
         ]);
 
         return redirect()->route('user')->with(['success' => 'berhasil di buat']);
@@ -58,9 +58,20 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(User $id)
+    public function edit(string $id)
     {
-        return view('admin.user.edit');
+        //get post by ID
+        $passwordUser = User::where('id', '=', $id)->first()->password;
+        $user = User::findOrFail($id);
+        // $pass = "12345";
+        // $encryptpass = Crypt::encrypt($pass);
+        $hasilpass = Crypt::decrypt($passwordUser);
+        
+        // dd($hasilpass);
+
+        return view('admin.user.edit', [
+            'hasilpass' => $hasilpass
+        ],compact('user'));
     }
 
     /**
@@ -68,7 +79,22 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email:dns|unique:users',
+            'password' => 'required'
+        ]);
+        
+        $user->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Crypt::encrypt($request->password)
+        ]);
+
+        dd($user);
+
+        return redirect()->route('user')->with(['success' => 'user berhasil di edit']);
     }
 
     /**

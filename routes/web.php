@@ -39,7 +39,10 @@ Route::prefix('admin')->group(function(){
         Route::get('/user/create', [App\Http\Controllers\Admin\UserController::class, 'create'])->name('user.create');
 
         //user
-        Route::get('/user/edit', [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('user.edit');
+        Route::get('/user/edit/{id}', [App\Http\Controllers\Admin\UserController::class, 'edit'])->name('user.edit');
+
+        //user
+        Route::put('/user/update/{id}', [App\Http\Controllers\Admin\UserController::class, 'update'])->name('user.update');
 
         //user post
         Route::post('user/store', [App\Http\Controllers\Admin\UserController::class, 'store'])->name('user.store');
