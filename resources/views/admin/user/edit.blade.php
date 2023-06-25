@@ -32,7 +32,7 @@
                                 <div class="mb-3 row">
                                     <label for="inputAcara" class="col-sm-2 col-form-label">Password</label>
                                     <div class="col-sm-10">
-                                        <input type="password" name="password" class="form-control" id="inputAcara" placeholder="password" value="{{ $hasilpass }}">
+                                        <input type="password" name="password" class="form-control" id="inputAcara" placeholder="password" value="{{ $user->password }}">
                                     </div>
                                 </div>
 

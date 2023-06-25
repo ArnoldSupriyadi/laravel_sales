@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Permission;
 
 class UserTableSeeder extends Seeder
@@ -19,7 +19,7 @@ class UserTableSeeder extends Seeder
         $userCreate = User::create([
             'name' => 'Arnold',
             'email' => 'admin@gmail.com',
-            'password' => Crypt::encrypt('password')
+            'password' => Hash::make('password')
         ]);
 
         //assign permission to role

@@ -65,13 +65,11 @@ class UserController extends Controller
         $user = User::findOrFail($id);
         // $pass = "12345";
         // $encryptpass = Crypt::encrypt($pass);
-        $hasilpass = Crypt::decrypt($passwordUser);
+        // $hasilpass = Crypt::decrypt($passwordUser);
         
-        // dd($hasilpass);
+        dd($user);
 
-        return view('admin.user.edit', [
-            'hasilpass' => $hasilpass
-        ],compact('user'));
+        return view('user.edit', compact('user'));
     }
 
     /**
